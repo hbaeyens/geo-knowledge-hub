@@ -35,16 +35,16 @@ install:
 script:
     - ./scripts/run-tests.sh
 
-deploy:
-    - provider: codedeploy
-      revision_type: github
-      access_key_id: "$AWS_ACCESS_KEY_ID"
-      secret_access_key: "$AWS_SECRET_ACCESS_KEY"
-      application: GEO-Knowledge-Hub
-      deployment_group: GEO-Knowledge-Hub-DeploymentGroup
-      region: us-east-1
-      on:
-          repo: geo-knowledge-hub/geo-knowledge-hub
-          branch: master
-      #wait_until_deployed: true
-      #skip_cleanup: true
+# deploy:
+#     - provider: codedeploy
+#       revision_type: github
+#       access_key_id: "$AWS_ACCESS_KEY_ID"
+#       secret_access_key: "$AWS_SECRET_ACCESS_KEY"
+#       application: GEO-Knowledge-Hub
+#       deployment_group: GEO-Knowledge-Hub-DeploymentGroup
+#       region: us-east-1
+#       on:
+#           repo: geo-knowledge-hub/geo-knowledge-hub
+#           branch: master
+#       wait_until_deployed: true
+#       skip_cleanup: true
